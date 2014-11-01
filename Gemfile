@@ -38,5 +38,9 @@ gem 'spring',        group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+# Simple Form aims to be as flexible as possible while helping you with powerful components to create your forms.
+gem 'simple_form'
+
 # Using Rails Assets
 gem 'rails-assets-angular', '1.2.10'
+gem 'rails-assets-ngUpload', '0.5.11'

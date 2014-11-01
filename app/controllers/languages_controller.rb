@@ -3,7 +3,7 @@ class LanguagesController < ApplicationController
   before_action :set_ng_app
 
   def ng_index
-    #
+    @language = Language.new
   end
 
   # GET /languages
