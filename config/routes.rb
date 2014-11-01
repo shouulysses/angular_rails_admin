@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  mount JasmineRails::Engine => '/specs' if defined?(JasmineRails)
+
   resources :languages do
     collection do
       get 'ng_index'

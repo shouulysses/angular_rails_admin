@@ -43,4 +43,12 @@ gem 'simple_form'
 
 # Using Rails Assets
 gem 'rails-assets-angular', '1.2.10'
+gem 'rails-assets-angular-mocks'
+gem 'rails-assets-sinon'
 gem 'rails-assets-ngUpload', '0.5.11'
+
+group :test, :development do
+  gem 'guard'
+  gem 'guard-jasmine', :git => 'https://github.com/guard/guard-jasmine', :branch => 'jasmine-2'
+  gem 'jasmine-rails'
+end
