@@ -12,7 +12,7 @@ languageApp.controller('indexCtrl', function($scope, $http) {
   };
 });
 
-languageApp.controller('formCtrl', function($scope, $element, $http) {
+languageApp.controller('formCtrl', function($scope, $http) {
   // 上傳完成
   $scope.completed = function(response) {
     $scope.name = '';
