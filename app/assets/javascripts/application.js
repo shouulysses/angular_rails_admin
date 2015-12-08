@@ -17,3 +17,4 @@
 //= require ngUpload
 
 //= require_tree .
+//= require_tree ./admin

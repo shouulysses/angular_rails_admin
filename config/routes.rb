@@ -1,11 +1,12 @@
 Rails.application.routes.draw do
   mount JasmineRails::Engine => '/specs' if defined?(JasmineRails)
-
-  resources :languages do
-    collection do
-      get 'ng_index'
+  namespace :admin do
+    resources :languages do
+      collection do
+        get 'ng_index'
+      end
     end
-  end
+  end  
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

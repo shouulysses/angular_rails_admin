@@ -11,9 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141030195904) do
+ActiveRecord::Schema.define(version: 20151208124300) do
 
-  create_table "languages", force: true do |t|
+  create_table "language_details", force: :cascade do |t|
+    t.text     "more"
+    t.integer  "language_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  add_index "language_details", ["language_id"], name: "index_language_details_on_language_id"
+
+  create_table "languages", force: :cascade do |t|
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"

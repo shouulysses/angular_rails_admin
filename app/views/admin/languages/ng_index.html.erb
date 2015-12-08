@@ -27,7 +27,7 @@
       <div class="panel panel-default">
         <div class="panel-heading">New Language</div>
         <div class="panel-body">
-          <%= simple_form_for @language, url: '/languages.json',
+          <%= simple_form_for @language, url: '/admin/languages.json',
             html: {:'ng-controller' => 'formCtrl', :'ng-upload' => 'completed(content)', role: 'form'} do |f| %>
             <div class="form-group">
               <%= f.input_field :name, class: 'form-control', :'ng-model' => 'name', placeholder: 'Name' %>
