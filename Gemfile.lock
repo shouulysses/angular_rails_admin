@@ -53,6 +53,7 @@ GEM
     angular-rails (0.0.12)
       coffee-script (~> 2.2.0)
       rails
+    angularjs-rails-resource (2.0.0)
     arel (6.0.3)
     builder (3.2.2)
     childprocess (0.5.8)
@@ -203,6 +204,7 @@ PLATFORMS
 
 DEPENDENCIES
   angular-rails
+  angularjs-rails-resource
   coffee-rails
   guard
   guard-jasmine!

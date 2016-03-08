@@ -4,6 +4,7 @@ class Admin::LanguagesController < ApplicationController
 
   def ng_index
     @language = Language.new
+      
   end
 
   # GET /languages
@@ -22,15 +23,11 @@ class Admin::LanguagesController < ApplicationController
     @language = Language.new
   end
 
-  # GET /languages/1/edit
-  def edit
-  end
-
   # POST /languages
   # POST /languages.json
   def create
     @language = Language.new(language_params)
-
+    
     respond_to do |format|
       if @language.save
         format.html { redirect_to admin_languages_url, notice: 'Language was successfully created.' }
@@ -39,6 +36,7 @@ class Admin::LanguagesController < ApplicationController
         format.html { render :new }
         format.json { render json: @language.errors, status: :unprocessable_entity }
       end
+      
     end
   end
 
@@ -70,11 +68,12 @@ class Admin::LanguagesController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_language
       @language = Language.find(params[:id])
+      @language_detail = LanguageDetail.find_by_id(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def language_params
-      params.require(:language).permit(:name)
+      params.require(:language).permit(:name, language_details_attributes: [:more])
     end
 
     def set_ng_app
